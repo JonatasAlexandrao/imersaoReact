@@ -1,5 +1,28 @@
 //Olhar depois
 destructuring array js `[...asdad]`
+styled-components
+rever aula 02 --> SPA, react-router-dom, tag a e component Link, caminhos paths, react-slick.
+custom hooks
+
+### Caso vc baixe um projeto do git vc pode instalar suas dependencias usando o comando `npm install`
+
+# styled-components
+  - npm install styled-components
+  - para usar no arquivo deve se importar:
+    `import styled from "styled-components;`
+  - é bom instalar a extenção para o vsCode ela vai fazer vc conseguir escrever esse CSS como se estivesse em um arquivo .css com coloração e ajuda.
+
+  - O styled-components serve para facilitar a forma de escrever CSS dentro de um arquivo JS. Vc cria um elemento e atribui a ele o styled.tagHTML e depois entre crases passa o código css.
+    Ex: 
+    ```
+    const Button = styled.a`
+    color: var(--white);
+    border: 1px solid var(--white);
+    &:focus {
+    opacity: .5;
+    }
+    `;
+    ```
 
 # Instalar ESLint
   Para manter um padrão no projeto, ele vai mostrar erros nas linhas que estiverem usando um padrão não recomendado.
@@ -65,23 +88,29 @@ destructuring array js `[...asdad]`
       para -----> "server": "json-server --watch db.json--port 8080",
   - agora roda com --> npm run dev
 
+# Hooks
+  - https://pt-br.reactjs.org/docs/hooks-reference.html#defer-formatting-debug-values
 
-# useEffect
-  Agente chama ele quando quisermos que um efeito colateral aconteça. Serão dois parametros, o primeiro é o que vc quer que aconteça e o segundo é quando agente quer que aconteça.
-  - import React, { useState, useEffect } from 'react'
-  - Exemplo:
-    useEffect (() => {
-      console.log('testando');
-    }, [
-      value.nomes,
-    ]);
-    // nesse caso só vai ativar quando o value.nomes mudar.
-    //se passar um array vazio no segundo parametro isso indica que agente só quer que aconteça uma vez
-    //se não for passado nem um array ele vai executar em todas as atualizações que tiverem de componentes na tela, qualquer tecla ou coisa assim ativa ele.
+  ## useEffect
+    Agente chama ele quando quisermos que um efeito colateral aconteça. Serão dois parametros, o primeiro é o que vc quer que aconteça e o segundo é quando agente quer que aconteça.
+    - import React, { useState, useEffect } from 'react'
+    - Exemplo:
+      useEffect (() => {
+        console.log('testando');
+      }, [
+        value.nomes,
+      ]);
+      // nesse caso só vai ativar quando o value.nomes mudar.
+      //se passar um array vazio no segundo parametro isso indica que agente só quer que aconteça uma vez
+      //se não for passado nem um array ele vai executar em todas as atualizações que tiverem de componentes na tela, qualquer tecla ou coisa assim ativa ele.
 
+  ## useState
+  ## useHistory
 
+# dataList
 
-
+.find()
 
 # Outras coisas
+  ## Vercel
   ## Hiroku

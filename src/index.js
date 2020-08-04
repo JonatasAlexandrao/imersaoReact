@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Home from './pages/cadastro/Home/App';
 
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import CadastroVideo from './pages/cadastro/Video'
+import Home from './pages/Home/App';
+import CadastroVideo from './pages/cadastro/Video';
 import CadastroCategoria from './pages/cadastro/Categoria';
 
-const Pagina404 = () => (<div>Página 404</div>);
+// Desafio master blaster na descrição
+const Pagina404 = () => (<div>Página 404</div>)
 
 ReactDOM.render(
   <BrowserRouter>
@@ -15,12 +16,9 @@ ReactDOM.render(
       <Route path="/" component={Home} exact />
       <Route path="/cadastro/video" component={CadastroVideo} />
       <Route path="/cadastro/categoria" component={CadastroCategoria} />
-      <Route component={Pagina404} /> 
+      <Route component={Pagina404} />
       /* se vc retirar o path ele ira sempre ser executado caso nem uma outra route tenha sido */
     </Switch>
   </BrowserRouter>,
   document.getElementById('root')
 );
-
-
-
